@@ -1,3 +1,9 @@
+// import { Elm } from "./Game.elm";
+// console.log(Elm);
+// Elm.Game.init({
+//     node: document.getElementById("elm"),
+// });
+
 const enum DiskKind {
     White = 0,
     Black = 1,
@@ -12,11 +18,7 @@ class Vec2 {
         this.y = y;
     }
     scanAll(operation: (x:number, y: number) => void) {
-        for (let yy = 0; yy < this.y; ++yy) {
-            this.scanRow((x) => {
-                operation(x, yy)
-            });
-        }
+        this.mapAll(operation);
     }
     mapAll<R>(operation: (x:number, y: number) => R): R[][] {
         const ret: R[][] = []
@@ -52,6 +54,7 @@ class Vec2 {
         return this.x + 1 >= maxX ? this : new Vec2(this.x + 1, this.y);
     }
 }
+
 class Game {
 
     readonly board = new Vec2(8, 8);
