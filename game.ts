@@ -4,6 +4,12 @@
 //     node: document.getElementById("elm"),
 // });
 
+import "regenerator-runtime";
+(async function() {
+    const text = await( await fetch(`/api/message`)).text();
+    document.querySelector('#name')!.textContent = text;
+}());
+
 const enum DiskKind {
     White = 0,
     Black = 1,
