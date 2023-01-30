@@ -6,7 +6,7 @@
 
 import "regenerator-runtime";
 (async function() {
-    const text = await( await fetch(`/api/message`)).text();
+    const { text } = await( await fetch(`/api/message`)).json();
     document.querySelector('#name')!.textContent = text;
 }());
 

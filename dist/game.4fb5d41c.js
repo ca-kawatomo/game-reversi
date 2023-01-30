@@ -1050,10 +1050,10 @@ require("regenerator-runtime");
         case 1:
           return [4
           /*yield*/
-          , _a.sent().text()];
+          , _a.sent().json()];
 
         case 2:
-          text = _a.sent();
+          text = _a.sent().text;
           document.querySelector('#name').textContent = text;
           return [2
           /*return*/
@@ -1281,7 +1281,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62824" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50560" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
