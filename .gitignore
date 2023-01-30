@@ -1,6 +1,5 @@
 .cache/
 node_modules/
-package.json
 package-lock.jsonelm-stuff/
 elm-stuff/
 .vscode/
