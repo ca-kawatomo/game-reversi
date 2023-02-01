@@ -4,7 +4,8 @@
     "elm-hot": "^1.1.6",
     "node-elm-compiler": "^5.0.6",
     "postcss": "^8.4.21",
-    "typescript": "^4.9.4"
+    "typescript": "^4.9.4",
+    "uglify-es": "^3.3.9"
   },
   "dependencies": {
     "regenerator-runtime": "^0.13.11"

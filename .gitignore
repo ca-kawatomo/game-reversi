@@ -1,5 +1,4 @@
-.cache/
-node_modules/
-package-lock.jsonelm-stuff/
-elm-stuff/
-.vscode/
+.vscode
+.cache
+node_modules
+elm-stuff
