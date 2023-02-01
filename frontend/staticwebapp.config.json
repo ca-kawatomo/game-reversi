@@ -8,6 +8,12 @@
         {
             "route": "/.auth/login/twitter",
             "statusCode": 404
+        },
+        {
+            "route": "/api/message",
+            "allowedRoles": [
+                "authenticated"
+            ]
         }
     ]
 }
