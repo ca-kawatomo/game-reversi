@@ -1,4 +1,4 @@
-module Game exposing (..)
+module Index exposing (..)
 
 import Browser
 import Html exposing (Html, button, div, text)

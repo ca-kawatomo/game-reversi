@@ -1,13 +1,16 @@
-import { Elm } from "./Game.elm";
-console.log(Elm);
-Elm.Game.init({
+import { Elm } from "./Index.elm";
+Elm.Index.init({
     node: document.getElementById("elm"),
 });
 
 import "regenerator-runtime";
 (async function() {
-    const { text } = await( await fetch(`/api/message`)).json();
-    document.querySelector('#name')!.textContent = text;
+    const text = await( await fetch(`/api/message`)).text();
+    document.querySelector('#api-message')!.textContent = text;
+}());
+(async function() {
+    const text = await( await fetch(`/.auth/me`)).text();
+    document.querySelector('#me')!.textContent = text;
 }());
 
 const enum DiskKind {
