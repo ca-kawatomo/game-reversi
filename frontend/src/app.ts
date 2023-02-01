@@ -9,7 +9,12 @@ import "regenerator-runtime";
     document.querySelector('#api-message')!.textContent = text;
 }());
 (async function() {
-    const text = await( await fetch(`/.auth/me`)).text();
+    const res = await fetch(`/.auth/me`);
+    if (res.status >= 400) {
+        document.querySelector('#me')!.textContent = res.statusText;
+        return;
+    }
+    const text = await res.text();
     document.querySelector('#me')!.textContent = text;
 }());
 
