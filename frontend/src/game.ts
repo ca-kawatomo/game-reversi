@@ -1,8 +1,8 @@
-// import { Elm } from "./Game.elm";
-// console.log(Elm);
-// Elm.Game.init({
-//     node: document.getElementById("elm"),
-// });
+import { Elm } from "./Game.elm";
+console.log(Elm);
+Elm.Game.init({
+    node: document.getElementById("elm"),
+});
 
 import "regenerator-runtime";
 (async function() {
