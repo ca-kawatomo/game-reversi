@@ -3,5 +3,11 @@
         "allowedIpRanges": [
             "0.0.0.0/0"
         ]
-    }
+    },
+    "routes": [
+        {
+            "route": "/.auth/login/twitter",
+            "statusCode": 404
+        }
+    ]
 }
