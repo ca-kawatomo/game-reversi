@@ -5,16 +5,13 @@ Elm.Index.init({
 
 import "regenerator-runtime";
 (async function() {
-    const text = await( await fetch(`/api/message`)).text();
+    const res = await fetch(`/api/message`);
+    const text = res.status >= 400 ? res.statusText : await res.text();
     document.querySelector('#api-message')!.textContent = text;
 }());
 (async function() {
     const res = await fetch(`/.auth/me`);
-    if (res.status >= 400) {
-        document.querySelector('#me')!.textContent = res.statusText;
-        return;
-    }
-    const text = await res.text();
+    const text = res.status >= 400 ? res.statusText : await res.text();
     document.querySelector('#me')!.textContent = text;
 }());
 
