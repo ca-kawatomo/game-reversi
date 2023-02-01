@@ -4,3 +4,4 @@ rm -fr dist/.auth
 html-minifier --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype dist/index.html -o dist/index.html
 npx ts-node custom-build.js
 rm dist/*.map
+cp staticwebapp.config.json dist 
